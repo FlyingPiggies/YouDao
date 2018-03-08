@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+    <h2 style="text-align: center">{{ article.title }}</h2>
+    <div style="text-align: center">
+        <p>{{ article.content }}</p>
+    </div>
+
+    <div>
+        <a style="position: relative; left: 20%" href="{% url "articles:detail" id=article.id|add:'1' %}">previous</a>
+        <a style="position: relative; left: 80%" href="{% url "articles:detail" id=article.id|add:'-1' %}">next</a>
+    </div>
+
+</body>
+</html>
